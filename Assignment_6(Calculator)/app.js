@@ -33,6 +33,9 @@ buttons.forEach(function (button) {
         else if (value === "❎") {
             del();
         }
+        else if (value === "%") {
+            handlePercentage();
+        }
 
 
     })
@@ -143,5 +146,12 @@ buttons.forEach(function (button) {
         expression.textContent = previousInput + " " + opr + " " + input;
     }
 }
+    function handlePercentage() {
+        if (input != "") {
+            input = (parseFloat(input) / 100).toString();
+            result.textContent = input;
+        }
+    }
+
 
 })
