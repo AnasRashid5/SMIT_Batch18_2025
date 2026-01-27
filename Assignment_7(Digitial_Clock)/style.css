@@ -26,13 +26,28 @@ body {
     max-width: 50rem;
 }
 
-.day {
-    font-size: 3rem;
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.day-name,
+.date,
+.year {
+    font-size: 2.5rem;
+    color: #f0f0f0;
+    letter-spacing: 0.05em;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.day-name {
     color: #ffd700;
     font-weight: 600;
-    letter-spacing: 0.2em;
-    text-shadow: 0 0 0.625rem rgba(255, 215, 0, 0.5);
-    margin-bottom: 0.5rem;
 }
 
 .time {
@@ -62,37 +77,15 @@ body {
     text-shadow: 0 0 0.625rem rgba(255, 215, 0, 0.5);
 }
 
-.date-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.month,
-.date,
-.year {
-    font-size: 2.5rem;
-    color: #f0f0f0;
-    letter-spacing: 0.05em;
-    opacity: 0.95;
-    font-weight: 500;
-}
-
-.month {
-    color: #ffd700;
-    font-weight: 600;
-}
-
 @media (max-width: 900px) {
     .clock-container {
         padding: 2.5rem 3rem;
     }
 
-    .day {
-        font-size: 2.5rem;
+    .day-name,
+    .date,
+    .year {
+        font-size: 2rem;
     }
 
     .time {
@@ -102,12 +95,6 @@ body {
     #period {
         font-size: 4rem;
     }
-
-    .month,
-    .date,
-    .year {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 700px) {
@@ -115,9 +102,10 @@ body {
         padding: 2rem 2.5rem;
     }
 
-    .day {
-        font-size: 2rem;
-        letter-spacing: 0.15em;
+    .day-name,
+    .date,
+    .year {
+        font-size: 1.8rem;
     }
 
     .time {
@@ -128,12 +116,6 @@ body {
     #period {
         font-size: 3rem;
     }
-
-    .month,
-    .date,
-    .year {
-        font-size: 1.8rem;
-    }
 }
 
 @media (max-width: 550px) {
@@ -142,9 +124,10 @@ body {
         width: 95%;
     }
 
-    .day {
-        font-size: 1.6rem;
-        letter-spacing: 0.1em;
+    .day-name,
+    .date,
+    .year {
+        font-size: 1.4rem;
     }
 
     .time {
@@ -157,12 +140,6 @@ body {
         font-size: 2.2rem;
         margin-left: 0.3rem;
     }
-
-    .month,
-    .date,
-    .year {
-        font-size: 1.4rem;
-    }
 }
 
 @media (max-width: 450px) {
@@ -171,9 +148,10 @@ body {
         width: 96%;
     }
 
-    .day {
-        font-size: 1.3rem;
-        letter-spacing: 0.08em;
+    .day-name,
+    .date,
+    .year {
+        font-size: 1.2rem;
     }
 
     .time {
@@ -185,12 +163,6 @@ body {
         font-size: 1.8rem;
         margin-left: 0.2rem;
     }
-
-    .month,
-    .date,
-    .year {
-        font-size: 1.2rem;
-    }
 }
 
 @media (max-width: 380px) {
@@ -199,9 +171,14 @@ body {
         width: 98%;
     }
 
-    .day {
-        font-size: 1.1rem;
-        letter-spacing: 0.06em;
+    .date-container {
+        gap: 0.3rem;
+    }
+
+    .day-name,
+    .date,
+    .year {
+        font-size: 1rem;
     }
 
     .time {
@@ -213,16 +190,6 @@ body {
         font-size: 1.5rem;
         margin-left: 0.15rem;
     }
-
-    .date-container {
-        gap: 0.3rem;
-    }
-
-    .month,
-    .date,
-    .year {
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 320px) {
@@ -231,9 +198,10 @@ body {
         width: 99%;
     }
 
-    .day {
-        font-size: 0.95rem;
-        letter-spacing: 0.05em;
+    .day-name,
+    .date,
+    .year {
+        font-size: 0.9rem;
     }
 
     .time {
@@ -242,11 +210,5 @@ body {
 
     #period {
         font-size: 1.3rem;
-    }
-
-    .month,
-    .date,
-    .year {
-        font-size: 0.9rem;
     }
 }
